@@ -55,7 +55,7 @@ Add the following to your `pubspec.yaml`:
 
 ```
 dependencies:
-  open_mail: ^1.2.1
+  open_mail: ^1.3.0
 ```
 
 Then, run the following command:
