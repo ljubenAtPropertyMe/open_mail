@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- Swift Package Manager support for iOS, alongside the existing CocoaPods podspec. The iOS plugin is now pure Swift (the legacy Objective-C `OpenMailAppPlugin` bridge class has been removed; `SwiftOpenMailAppPlugin` is renamed to `OpenMailAppPlugin`, which was already the `pluginClass` declared in `pubspec.yaml`, so no consumer-facing change is needed).
+
+### Changed
+
+- Migrated the Android plugin off explicitly applying the Kotlin Gradle Plugin (`kotlin-android`) in favor of AGP's built-in Kotlin support, per [Flutter's plugin-author migration guide](https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-plugin-authors). This avoids the conflict AGP 9+ raises when both the plugin and a consuming app apply Kotlin separately (see [flutter/flutter#181383](https://github.com/flutter/flutter/issues/181383)).
+- Raised the minimum supported Flutter version to 3.44.0 and Dart SDK to 3.12.0, required by the built-in Kotlin migration above.
+- Bumped the podspec/`Package.swift` minimum iOS deployment target from 8.0 to 15.0 — the version this was previously pinned to is no longer buildable on current Xcode toolchains, and 15.0 matches what `flutter build ios` already enforces as its own floor.
+- Dropped a stale `VALID_ARCHS[sdk=iphonesimulator*] => 'x86_64'` constraint from the podspec, left over from pre-Apple Silicon tooling; it was silently forcing x86_64-only simulator builds.
+
 ## [1.2.1] - 2025-11-03
 
 ### Added

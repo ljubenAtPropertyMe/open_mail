@@ -5,8 +5,8 @@ homepage: https://github.com/Cuboid-Inc/open_mail
 repository: https://github.com/Cuboid-Inc/open_mail
 
 environment:
-  sdk: ">=2.17.0 <4.0.0"
-  flutter: ">=1.17.0"
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
 
 dependencies:
   collection: ^1.19.1

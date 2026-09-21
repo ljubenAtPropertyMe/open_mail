@@ -1,6 +1,6 @@
 # Open Mail
 
-![Flutter 3.24.4](https://img.shields.io/badge/Flutter-3.24.4-blue)
+![Flutter 3.44+](https://img.shields.io/badge/Flutter-3.44%2B-blue)
 [![pub package](https://img.shields.io/pub/v/open_mail.svg?label=open_mail&color=blue)](https://pub.dev/packages/open_mail)
 
 ### Open Mail is a Flutter package designed to simplify the process of querying installed email apps on a device and allowing users to open the email app of their choice.
